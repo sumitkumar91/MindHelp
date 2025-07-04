@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindHelp - Mental Health Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>🧠 MindHelp</h1>
+            <p>Your mental health matters. Take the first step toward understanding your wellbeing.</p>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('assessment')">Assessment</button>
+            <button class="nav-tab" onclick="showTab('mood-tracker')">Mood Tracker</button>
+            <button class="nav-tab" onclick="showTab('resources')">Resources</button>
+        </div>
+
+        <div class="content">
+            <div id="assessment" class="tab-content active">
+                <div id="assessment-start">
+                    <div class="assessment-intro">
+                        <h2>Mental Health Self-Assessment</h2>
+                        <p>This brief assessment is based on validated screening tools and can help you understand your current mental health. Remember, this is not a diagnosis - always consult with a healthcare professional for proper evaluation.</p>
+                    </div>
+                    <button class="btn" onclick="startAssessment()">Start Assessment</button>
+                </div>
+
+                <div id="assessment-questions" style="display: none;">
+                    <div id="question-container"></div>
+                    <button class="btn" id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <span id="progress">Question 1 of 10</span>
+                    </div>
+                </div>
+
+                <div id="assessment-results" style="display: none;">
+                    <div class="results-card">
+                        <h2>Your Assessment Results</h2>
+                        <div class="score-display" id="score-display">0/30</div>
+                        <p>Assessment completed on <span id="date-completed"></span></p>
+                    </div>
+
+                    <div class="interpretation" id="interpretation">
+                        <!-- Results interpretation will be inserted here -->
+                    </div>
+
+                    <button class="btn" onclick="resetAssessment()">Take Assessment Again</button>
+                </div>
+            </div>
+
+            <div id="mood-tracker" class="tab-content">
+                <h2>Daily Mood Tracker</h2>
+                <p>Track your mood over time to identify patterns and triggers.</p>
+                
+                <div class="mood-tracker">
+                    <div class="mood-day" data-mood="1" onclick="selectMood(this, 1)">😢</div>
+                    <div class="mood-day" data-mood="2" onclick="selectMood(this, 2)">😟</div>
+                    <div class="mood-day" data-mood="3" onclick="selectMood(this, 3)">😐</div>
+                    <div class="mood-day" data-mood="4" onclick="selectMood(this, 4)">🙂</div>
+                    <div class="mood-day" data-mood="5" onclick="selectMood(this, 5)">😊</div>
+                    <div class="mood-day" data-mood="6" onclick="selectMood(this, 6)">😁</div>
+                    <div class="mood-day" data-mood="7" onclick="selectMood(this, 7)">🤩</div>
+                </div>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <p>Select your mood for today</p>
+                    <button class="btn" onclick="saveMood()">Save Today's Mood</button>
+                </div>
+
+                <div id="mood-history">
+                    <h3>Mood History (Last 7 Days)</h3>
+                    <div id="mood-chart" style="background: white; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                        <p>Start tracking to see your mood patterns!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resources Tab -->
+            <div id="resources" class="tab-content">
+                <div class="crisis-banner">
+                    <h3>🚨 Crisis Resources</h3>
+                    <p><strong>National Suicide Prevention Lifeline:</strong> 988</p>
+                    <p><strong>Crisis Text Line:</strong> Text HOME to 741741</p>
+                    <p>If you're in immediate danger, call 911</p>
+                </div>
+
+                
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js" defer></script>
+</body>
+</html>
