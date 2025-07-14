@@ -19,6 +19,10 @@
 - **🎨 Modern UI**  
   Clean design with gradients, animations, and responsive layout for mobile and desktop.
 
+## 🚀 Live Demo
+
+👉 [Click here to try it now!](https://sumitkumar91.github.io/mindhelp/)
+
 ## 🛠️ Tech Stack
 
 - HTML5  
