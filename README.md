@@ -21,7 +21,7 @@
 
 ## 🚀 Live Demo
 
-👉 [Click here to try it now!](https://sumitkumar91.github.io/mindhelp/)
+👉 [Click here to try it now!](https://sumitkumar91.github.io/mind-help/)
 
 ## 🛠️ Tech Stack
 
